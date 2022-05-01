@@ -1,0 +1,22 @@
+:host {
+    .favorites {
+        &__section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+    
+            & > * {
+                flex: 0 0 45%;
+            }
+        }
+    
+    }
+    .loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    
+}

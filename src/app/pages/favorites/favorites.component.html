@@ -1,0 +1,5 @@
+<section class="favorites__section">
+    <mat-card *ngFor="let image of favorites64; let i = index">
+        <img mat-card-image [src]="image | safeUrl" [routerLink]="['/photos', i]" alt="Some random favorite image">
+    </mat-card>
+</section>
