@@ -1,0 +1,32 @@
+:host {
+    .photos {
+        &__section {
+            min-height: 100vh;
+
+        }
+    
+    }
+
+    img {
+        cursor: pointer;
+    }
+
+    app-infinite-scroll {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        & > *:not(:last-child) {
+            flex: 0 0 30%;
+            margin: 20px 0 20px 0;
+        }
+
+    }
+    .loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    
+}

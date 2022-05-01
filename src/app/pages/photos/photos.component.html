@@ -1,0 +1,21 @@
+<section class="photos__section" >
+   <ng-container  *ngIf="loadImagesObs$ | async else spinner">
+    <app-infinite-scroll (scrolled)="onScroll()">
+        <mat-card *ngFor="let image of images">
+            <img mat-card-image (click)="addToFavorites(image.blob)" [src]="image.url | safeUrl" alt="Random image">
+        </mat-card>
+   
+       </app-infinite-scroll>
+       <ng-container *ngIf="isLoading$ | async">
+        <div class="loader">
+            <p>Fetching photos...</p>
+            <mat-progress-spinner mode="indeterminate" ></mat-progress-spinner>
+        </div>
+    </ng-container>
+    </ng-container>
+</section>
+<ng-template #spinner>
+    <div class="loader">
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+    </div>
+</ng-template>
