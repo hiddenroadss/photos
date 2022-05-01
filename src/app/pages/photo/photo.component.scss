@@ -1,0 +1,13 @@
+.photo {
+    &__section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        mat-card {
+            flex: 0 0 70%;
+        }
+    }
+
+
+}

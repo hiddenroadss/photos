@@ -1,0 +1,8 @@
+<section class="photo__section" *ngIf="image">
+    <mat-card>
+        <img mat-card-image [src]="image" alt="Some image">
+        <mat-card-actions>
+            <button mat-button (click)="removeFromFavorites()">Remove from favorites</button>
+        </mat-card-actions>
+    </mat-card>
+</section>
