@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Link } from '@core/models';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'photos';
+  links: Link[] = [
+    {
+      path: '/',
+      text: 'Photos'
+    },
+    {
+      path: '/favorites',
+      text: 'Favorites'
+    }
+  ]
+
+  
 }
