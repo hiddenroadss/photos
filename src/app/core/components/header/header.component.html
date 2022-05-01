@@ -1,0 +1,9 @@
+<mat-toolbar>
+    <nav>
+        <ul>
+            <li *ngFor="let link of links">
+                <a [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{link.text}}</a>
+            </li>
+        </ul>
+    </nav>
+</mat-toolbar>
